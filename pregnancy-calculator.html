@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة الحمل | تاريخ الولادة المتوقع وأسبوع الحمل</title>
+<meta name="description" content="حاسبة الحمل المجانية: أدخلي تاريخ آخر دورة شهرية واعرفي تاريخ الولادة المتوقع، أسبوع حملك الحالي، والثلث الذي تعيشينه — فوراً وبدقة.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://majidalawa.github.io/mosuwa/pregnancy-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="حاسبة الحمل | تاريخ الولادة المتوقع وأسبوع الحمل">
+<meta property="og:description" content="أدخلي تاريخ آخر دورة واعرفي تاريخ الولادة المتوقع وأسبوع حملك والثلث الحالي — فوراً.">
+<meta property="og:url" content="https://majidalawa.github.io/mosuwa/pregnancy-calculator.html">
+<meta property="og:site_name" content="موسوعة اليوم">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كيف تحسب مدة الحمل؟","acceptedAnswer":{"@type":"Answer","text":"يبدأ العد من أول يوم لآخر دورة شهرية (وليس من يوم الإخصاب)، لأن تاريخ الدورة أسهل تذكّراً وأكثر دقة من تخمين يوم الإخصاب."}},{"@type":"Question","name":"ما دقة تاريخ الولادة المتوقع؟","acceptedAnswer":{"@type":"Answer","text":"التاريخ المتوقع تقدير إحصائي، وأغلب الولادات تحدث بين الأسبوع 37 و42. عادةً يولد الطفل خلال أسبوع تقريباً من التاريخ المحسوب، والموجات فوق الصوتية المبكرة تدقّق الرقم أكثر."}},{"@type":"Question","name":"كيف أعرف الثلث الذي أنا فيه؟","acceptedAnswer":{"@type":"Answer","text":"الثلث الأول من الأسبوع 1 إلى 13، والثاني من 14 إلى 27، والثالث من 28 حتى الولادة. الحاسبة تحدد لك الثلث الحالي تلقائياً."}},{"@type":"Question","name":"ما قاعدة نايجل في حساب الحمل؟","acceptedAnswer":{"@type":"Answer","text":"قاعدة كلاسيكية تضيف 7 أيام و9 أشهر تقويمية إلى أول يوم للدورة الأخيرة، وتوافق حساب 280 يوماً من تاريخ الدورة — وهي نفسها التي تعتمدها الحاسبة."}},{"@type":"Question","name":"هل الحمل 9 أشهر أم 40 أسبوعاً؟","acceptedAnswer":{"@type":"Answer","text":"الحمل الكامل يقاس بـ 40 أسبوعاً من آخر دورة، أي نحو 9 أشهر و7 أيام تقويمية. الفرق سببه أن عد الأسبوع يبدأ من الدورة لا من الإخصاب."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://majidalawa.github.io/mosuwa/"},{"@type":"ListItem","position":2,"name":"حاسبة الحمل","item":"https://majidalawa.github.io/mosuwa/pregnancy-calculator.html"}]}
+</script>
+<link rel="alternate" type="application/rss+xml" title="موسوعة اليوم RSS" href="https://majidalawa.github.io/mosuwa/rss.xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand">📚 <span>موسوعة</span> اليوم</a>
+  <nav class="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="bmi-calculator.html">حاسبة كتلة الجسم</a>
+    <a href="age-calculator.html">حاسبة العمر</a>
+  </nav>
+</div></header>
+
+<main class="container">
+  <div class="breadcrumbs">🏠 الرئيسية / 🧮 الأدوات / حاسبة الحمل</div>
+  <article class="article">
+    <h1>حاسبة الحمل — تاريخ الولادة المتوقع وأسبوعك الحالي</h1>
+    <p class="lead">أدخلي أول يوم لآخر دورة شهرية وستعرفين فوراً: تاريخ الولادة المتوقع، عدد أسابيع حملك الحالي، والثلث الذي تعيشينه، وكم يوماً متبقياً للقاء طفلك.</p>
+
+    <div class="tool-box">
+      <label for="lmpDate">📅 أول يوم لآخر دورة شهرية:</label>
+      <input type="date" id="lmpDate">
+      <label for="cycleLen">🔄 طول الدورة المعتاد (يوم) — اتركيه 28 إن لم تكوني متأكدة:</label>
+      <input type="number" id="cycleLen" value="28" min="21" max="35" inputmode="numeric">
+      <button class="btn btn-primary" id="pregBtn" style="margin-top:14px;width:100%">احسبي موعد الولادة</button>
+      <div class="result" id="pregResult" hidden></div>
+    </div>
+
+    <h2>كيف تعمل حاسبة الحمل؟ (قاعدة نايجل)</h2>
+    <p>تعتمد الحاسبة على القاعدة الكلاسيكية المعروفة باسم "قاعدة نايجل"، وهي نفسها المرجع الأول الذي يبدأ به الأطباء تقدير الحمل: تُضاف 280 يوماً (40 أسبوعاً) إلى أول يوم لآخر دورة شهرية. قد يبدو غريباً أن يبدأ العد قبل حدوث الإخصاب بأسابيع، لكن السبب عملي بحت: أغلب النساء يتذكرن تاريخ دورتهن بدقة بينما يصعب تحديد يوم الإخصاب الحقيقي، فجعلت البداية من الدورة لتوحيد المرجع.</p>
+    <p>وإذا كان طول دورتك يختلف عن 28 يوماً بانتظام، فالحاسبة تضبط النتيجة تلقائياً: كل يوم زائد على 28 يُضاف إلى تاريخ الولادة المتوقع، وكل يوم أقل يُطرح. هذه الحسبة التقريبية تصحح فرق الإباضة بين الدورات، وتبقى الموجات فوق الصوتية في الثلث الأول هي الأداة الأدق لمعايرة التاريخ النهائي التي يعتمدها طبيبك.</p>
+
+    <h2>ماذا تعني النتيجة: الأسبوع والثلث والأيام المتبقية</h2>
+    <p>تعرض لك الحاسبة ثلاث معلومات مترابطة: <strong>الأسبوع الحالي</strong> الذي تحسبه بالأسابيع المكتملة منذ أول يوم للدورة، وهو نفس اللغة التي يتحدث بها طبيبك وأي تطبيق متابعة؛ <strong>الثلث الحالي</strong> الذي يحدد طبيعة الفحوصات المتوقعة في هذه المرحلة؛ و<strong>الأيام المتبقية</strong> حتى التاريخ المتوقع لموعدك الكبير. معرفة الأسبوع بدقة ليست ترفاً — فالفحوصات وقرارات المتابعة كلها مربوطة بنوافذ زمنية محددة.</p>
+    <div class="table-wrap"><table>
+      <tr><th>المرحلة</th><th>الأسابيع</th><th>ما يميزها عملياً</th></tr>
+      <tr><td>الثلث الأول</td><td>1 – 13</td><td>تأكيد الحمل، أول صدى، بداية الفيتامينات</td></tr>
+      <tr><td>الثلث الثاني</td><td>14 – 27</td><td>الهدوء النسبي، تحديد الجنس، فحص التشوهات</td></tr>
+      <tr><td>الثلث الثالث</td><td>28 – 40</td><td>النمو السريع، متابعة مكثفة، تجهيز الحقيبة</td></tr>
+    </table></div>
+
+    <h2>محطات مهمة في رحلة الأسبوع الـ 40</h2>
+    <ul>
+      <li><strong>الأسبوع 6-8:</strong> أول نبض قلب يظهر غالباً في الفحص المبكر.</li>
+      <li><strong>الأسبوع 11-14:</strong> نافذة الفحص المناعي الأولي المزدوج.</li>
+      <li><strong>الأسبوع 18-22:</strong> صدى التشوهات الكبير وقدرة على معرفة الجنس غالباً.</li>
+      <li><strong>الأسبوع 24-28:</strong> فحص سكري الحمل ومتابعة الهيموغلوبين.</li>
+      <li><strong>الأسبوع 36+</strong> بدء المتابعة الأسبوعية ومراقبة علامات المخاض.</li>
+    </ul>
+    <p>حفظ هذه المحطات يجعلك تخرجين من كل زيارة بطبيبك بأسئلة أدق ومتابعة أفضل — فالمعرفة جزء كبير من الطمأنينة في هذه الرحلة التي تعيشها لأول مرة أو للمرة الرابعة.</p>
+
+    <div class="note note-red" style="border-right-color:#dc2626;background:#fee2e2">🩺 <strong>تنبيه مهم:</strong> هذه الحاسبة تقدير تعليمي مساعد وليست بديلاً عن الفحص الطبي. أي نزيف أو ألم شديد أو قلة حركة الجنين يستدعي التواصل مع طبيبك فوراً دون انتظار أي حساب.</div>
+
+    <h2>هل الدورة غير المنتظمة تفسد النتيجة؟</h2>
+    <p>الدورات غير المنتظمة هي الحالة الأكثر إثارة للقلق عند استخدام أي حاسبة، والإجابة المطمئنة أن النتيجة تبقى نقطة انطلاق جيدة لكنها تحتاج معايرة إضافية. الحقل المخصص لطول الدورة في الحاسبة يعالج جزءاً من الانحراف، أما الفروق الكبيرة غير المنتظمة فتظل خارج أي معادلة حسابية. في هذه الحالة تحديداً يتحول صدى الثلث الأول من "فحص مساند" إلى "المرجع الأساسي": فقياس طول الجنين بين الأسبوع السابع والحادي عشر يعطي تقديراً لعمر الحمل بحدود تفاوت تتراوح حول أيام معدودة.</p>
+    <p>نصيحة عملية للأمهات ذوات الدورات المتقلبة: سجلي نتيجة الحاسبة كتقدير أولي، ولا تتفاجئي إن عدّلها طبيبك بعد الفحص الأول — هذا تعديل طبيعي ومقصود وليس خطأ في الحساب، والهدف النهائي موعد واحد متفق عليه يرشد بقية المتابعة.</p>
+
+    <h2>أول علامات الحمل المبكرة التي تسبق الحاسبة</h2>
+    <p>قبل أن تفتحي أي حاسبة، تأتي العلامات المبكرة لتلفت الانتباه: تأخر الدورة هو الأشهر بلا منازع، ويليه الإرهاق غير المعتاد الذي يختلف عن التعب العادي بثقله المفاجئ، ثم غثيان الصباح الذي قد يظهر في أي وقت من اليوم رغم اسمه، وتغيرات الثدي من ملمس ووجع، وإفرازات خفيفة وردية عند وقت الدورة المتوقع تسمى نزيف الانغراس وقد تخدع البعض بالاعتقاد أنها دورة خفيفة.</p>
+    <p>المسار الذكي: عند تأخر الدورة ووجود أي من هذه العلامات، أجري اختبار الحمل المنزلي ببول الصباح الأول حيث تكون تركيزات الهرمون في أعلاها، وعند النتيجة الإيجابية ابدئي بتاريخ الدورة الأخيرة في الحاسبة أعلاه لتحصلي على الصورة الكاملة، ثم احجزي أول موعد طبي خلال الثلث الأول لتثبيت الحمل ومعايرة التاريخ رسمياً.</p>
+
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item"><div class="faq-q">كيف تحسب مدة الحمل؟</div><div class="faq-a"><p>يبدأ العد من أول يوم لآخر دورة شهرية لا من يوم الإخصاب، لأن تاريخ الدورة أدق وأسهل تذكّراً من تخمين الإخصاب.</p></div></div>
+    <div class="faq-item"><div class="faq-q">ما دقة تاريخ الولادة المتوقع؟</div><div class="faq-a"><p>هو تقدير إحصائي؛ أغلب الولادات تحدث بين الأسبوع 37 و42. صدى الثلث الأول يدقق الرقم أكثر من أي معادلة.</p></div></div>
+    <div class="faq-item"><div class="faq-q">كيف أعرف الثلث الذي أنا فيه؟</div><div class="faq-a"><p>الأول: أسابيع 1-13، الثاني: 14-27، الثالث: 28 حتى الولادة. الحاسبة تحدده لك تلقائياً مع النتيجة.</p></div></div>
+    <div class="faq-item"><div class="faq-q">ما قاعدة نايجل؟</div><div class="faq-a"><p>أضف 7 أيام و9 أشهر تقويمية لأول يوم للدورة الأخيرة — وتوافق حساب 280 يوماً الذي تعتمده الحاسبة.</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل الحمل 9 أشهر أم 40 أسبوعاً؟</div><div class="faq-a"><p>40 أسبوعاً من آخر دورة = نحو 9 أشهر و7 أيام. الفرق لأن العد يبدأ قبل الإخصاب بأسابيع.</p></div></div>
+
+    <div class="cta-box">
+      <div class="cta-text"><h3>🔴 المزيد من الأدوات في موقعنا الرسمي</h3><p>اكتشف أدوات مجانية أخرى لا تجدها هنا.</p></div>
+      <a class="btn btn-target" href="https://algeria01.lovable.app" data-target-cta>زيارة الموقع الرسمي ←</a>
+    </div>
+  </article>
+
+  <section class="related">
+    <h2>أدوات ومقالات ذات صلة</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">⚖️</div><h3>حاسبة كتلة الجسم</h3><p>تصنيف وزنك ونطاقك الصحي.</p><a href="bmi-calculator.html">افتحها الآن ←</a></div>
+      <div class="card"><div class="icon">🎂</div><h3>حاسبة العمر</h3><p>عمرك بالتفصيل خلال ثانية.</p><a href="age-calculator.html">افتحها الآن ←</a></div>
+      <div class="card"><div class="icon">💧</div><h3>فوائد شرب الماء</h3><p>احتياجك اليومي حسب وزنك.</p><a href="water-benefits.html">اقرأ الدليل ←</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div><h4>الأدوات</h4><a href="age-calculator.html">حاسبة العمر</a><a href="bmi-calculator.html">حاسبة كتلة الجسم</a><a href="hijri-converter.html">محول التاريخ</a></div>
+    <div><h4>أدلة تقنية</h4><a href="pdf-to-word.html">تحويل PDF</a><a href="speed-up-android.html">تسريع الهاتف</a><a href="recover-facebook.html">استرجاع فيسبوك</a></div>
+    <div><h4>أدلة عامة</h4><a href="dream-meanings.html">تفسير الأحلام</a><a href="whatsapp-status.html">حالات واتساب</a><a href="learn-english.html">تعلم الإنجليزية</a></div>
+    <div><h4>المزيد</h4><a href="tiktok-download.html">تحميل تيك توك</a><a href="gold-guide.html">سعر الذهب</a><a href="https://algeria01.lovable.app" data-target-cta style="color:#fbbf24">🔴 موقعنا الرسمي</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> موسوعة اليوم — جميع الحقوق محفوظة</div>
+</div></footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('pregBtn'),lmp=document.getElementById('lmpDate'),cy=document.getElementById('cycleLen'),out=document.getElementById('pregResult');
+  function fmt(d){return d.toLocaleDateString('ar', {weekday:'long', year:'numeric', month:'long', day:'numeric'});}
+  btn.addEventListener('click',function(){
+    if(!lmp.value){out.hidden=false;out.innerHTML='⚠️ اختاري أول يوم لآخر دورة شهرية أولاً';return;}
+    var start=new Date(lmp.value+'T00:00:00'),today=new Date();
+    var adj=(parseInt(cy.value)||28)-28;
+    var due=new Date(start.getTime());due.setDate(due.getDate()+280+adj);
+    if(due<today){out.hidden=false;out.innerHTML='⚠️ التاريخ المتوقع انتهى — إن لم تحدث الولادة بعد فاستشيري طبيبك فوراً';return;}
+    var daysSoFar=Math.floor((today-start)/86400000);
+    if(daysSoFar<0){out.hidden=false;out.innerHTML='⚠️ التاريخ المدخل مستقبلي — اختاري تاريخاً صحيحاً';return;}
+    var week=Math.floor(daysSoFar/7);
+    if(week>42){out.hidden=false;out.innerHTML='⚠️ مر أكثر من 42 أسبوعاً على التاريخ المدخل — تأكدي من صحة التاريخ';return;}
+    var tri=week<=13?'الأول 🌱':(week<=27?'الثاني 🌸':'الثالث 🌷');
+    var rem=Math.ceil((due-today)/86400000);
+    out.hidden=false;
+    out.innerHTML='👶 تاريخ الولادة المتوقع: '+fmt(due)+
+      '<small>📍 أنتِ الآن في الأسبوع '+week+' — الثلث '+tri+' — 🎉 بقي نحو '+rem+' يوماً</small>';
+  });
+})();
+</script>
+</body>
+</html>

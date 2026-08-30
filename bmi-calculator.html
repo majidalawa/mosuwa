@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة كتلة الجسم | احسب BMI ووزنك المثالي فوراً</title>
+<meta name="description" content="حاسبة كتلة الجسم BMI مجانية: أدخل طولك ووزنك واعرف تصنيف وزنك الصحي ونطاق وزنك المثالي بالكيلوغرام — نتائج فورية بدون تسجيل.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://majidalawa.github.io/mosuwa/bmi-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="حاسبة كتلة الجسم | احسب BMI ووزنك المثالي فوراً">
+<meta property="og:description" content="أدخل طولك ووزنك واعرف تصنيف وزنك الصحي ونطاق وزنك المثالي — فوراً ومجاناً.">
+<meta property="og:url" content="https://majidalawa.github.io/mosuwa/bmi-calculator.html">
+<meta property="og:site_name" content="موسوعة اليوم">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ما هو مؤشر كتلة الجسم BMI؟","acceptedAnswer":{"@type":"Answer","text":"مؤشر كتلة الجسم هو رقم يُحسب بقسمة الوزن بالكيلوغرام على مربع الطول بالمتر، ويستخدم عالمياً لتصنيف الوزن إلى نقص أو طبيعي أو زيادة أو سمنة."}},{"@type":"Question","name":"كيف أحسب مؤشر كتلة الجسم يدوياً؟","acceptedAnswer":{"@type":"Answer","text":"اقسم وزنك بالكيلوغرام على مربع طولك بالمتر. مثال: شخص وزنه 70 كغ وطوله 1.75 م: 70 ÷ (1.75 × 1.75) = 22.9 وهو وزن طبيعي."}},{"@type":"Question","name":"هل مؤشر BMI دقيق للرياضيين؟","acceptedAnswer":{"@type":"Answer","text":"ليس دقيقاً دائماً؛ العضلات أثقل من الدهون، فالرياضي قد يظهر تصنيفاً أعلى رغم انخفاض دهونه. يُنصح الرياضيين بأدوات قياس التركيبة الجسمية."}},{"@type":"Question","name":"ما الوزن المثالي لطولي؟","acceptedAnswer":{"@type":"Answer","text":"أدخل طولك في الحاسبة أعلاه وستظهر لك نطاق الوزن الصحي بالكيلوغرام المقابل لمؤشر 18.5 إلى 24.9 — وهو النطاق الأقل مخاطر صحية."}},{"@type":"Question","name":"هل تصلح حاسبة BMI للأطفال والحوامل؟","acceptedAnswer":{"@type":"Answer","text":"لا؛ الأطفال يحتاجون منحنيات نمو خاصة بالعمر والجنس، والحوامل يتغير وزنهن طبيعياً، لذا لا يُستخدم المؤشر القياسي لهما."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://majidalawa.github.io/mosuwa/"},{"@type":"ListItem","position":2,"name":"حاسبة كتلة الجسم","item":"https://majidalawa.github.io/mosuwa/bmi-calculator.html"}]}
+</script>
+<link rel="alternate" type="application/rss+xml" title="موسوعة اليوم RSS" href="https://majidalawa.github.io/mosuwa/rss.xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand">📚 <span>موسوعة</span> اليوم</a>
+  <nav class="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="age-calculator.html">حاسبة العمر</a>
+    <a href="pregnancy-calculator.html">حاسبة الحمل</a>
+  </nav>
+</div></header>
+
+<main class="container">
+  <div class="breadcrumbs">🏠 الرئيسية / 🧮 الأدوات / حاسبة كتلة الجسم</div>
+  <article class="article">
+    <h1>حاسبة كتلة الجسم (BMI) — اعرف تصنيف وزنك خلال ثانية</h1>
+    <p class="lead">أدخل طولك ووزنك وستعرف فوراً مؤشر كتلة الجسم وتصنيفه (نقص وزن، طبيعي، زيادة، سمنة)، إضافة إلى نطاق وزنك المثالي الصحي بالكيلوغرام.</p>
+
+    <div class="tool-box">
+      <label for="bmiHeight">📏 الطول (سم):</label>
+      <input type="number" id="bmiHeight" placeholder="مثال: 170" min="80" max="250" inputmode="decimal">
+      <label for="bmiWeight">⚖️ الوزن (كغ):</label>
+      <input type="number" id="bmiWeight" placeholder="مثال: 70" min="20" max="400" step="0.1" inputmode="decimal">
+      <button class="btn btn-primary" id="bmiBtn" style="margin-top:14px;width:100%">احسب مؤشر كتلة الجسم</button>
+      <div class="result" id="bmiResult" hidden></div>
+    </div>
+
+    <h2>ما هو مؤشر كتلة الجسم ولماذا يهتم به الأطباء؟</h2>
+    <p>مؤشر كتلة الجسم (Body Mass Index) هو مقياس عالمي بسيط يربط الوزن بالطول لتقدير ما إذا كان وزن الشخص ضمن النطاق الصحي أم لا. حُسب لقرون بأنه أسرع طريقة أولية لتصنيف الوزن دون أجهزة معملية، وهو نقطة البداية التي يعتمدها معظم الأطباء عند تقييم المخاطر الصحية المرتبطة بالنقص أو الزيادة في الوزن. قيمته محصورة من قسمة الوزن بالكيلوغرام على مربع الطول بالمتر، فكلما ارتفع المؤشر عن نطاق معين زادت الإشارة إلى احتمالية تراكم الدهون وما يرافقها من ضغوط على القلب والمفاصل والسكري.</p>
+    <p>الميزة الأهم لهذا المؤشر هي بسيطته المطلقة: لا يحتاج أجهزة ولا تكلفة، ويصلح للمتابعة الذاتية الأسبوعية أو الشهرية في المنزل. لكن انتبه إلى أنه "مؤشر" وليس "تشخيصاً" — فهو لا يفرق بين كتلة العضلات وكتلة الدهون، ولا يقيس توزيع الدهون في الجسم، وهما عاملان مهمان في الصحة الحقيقية.</p>
+
+    <h2>جدول تصنيفات مؤشر كتلة الجسم</h2>
+    <div class="table-wrap"><table>
+      <tr><th>قيمة المؤشر</th><th>التصنيف</th><th>المخاطر الصحية العامة</th></tr>
+      <tr><td>أقل من 18.5</td><td>نقص في الوزن</td><td>ضعف مناعة وهشاشة محتملة</td></tr>
+      <tr><td>18.5 – 24.9</td><td>وزن طبيعي ✅</td><td>النطاق الأقل مخاطر</td></tr>
+      <tr><td>25 – 29.9</td><td>زيادة في الوزن</td><td>بداية تراكم مخاطر مزمنة</td></tr>
+      <tr><td>30 – 34.9</td><td>سمنة درجة أولى</td><td>مخاطر مرتفعة</td></tr>
+      <tr><td>35 – 39.9</td><td>سمنة درجة ثانية</td><td>مخاطر عالية جداً</td></tr>
+      <tr><td>40 وأكثر</td><td>سمنة مفرطة</td><td>مخاطر حرجة تحتاج متابعة طبية</td></tr>
+    </table></div>
+
+    <h2>حدود المؤشر: متى لا تكون النتيجة دقيقة؟</h2>
+    <p>رغم شعبيته الواسعة، يجيب مؤشر كتلة الجسم عن سؤال "كم تزن نسبة لطولك" ولا يجيب عن سؤال "ما تركيب جسمك". الرياضي الذي يمتلك كتلة عضلية كبيرة قد يظهر في تصنيف "زيادة الوزن" رغم أن نسبة دهونه منخفضة، بينما شخص ضعيف العضلات لكنه غني بالدهون قد يظهر "طبيعياً" وهو في خطر حقيقي. هذا ما يسمى "السمنة النحيفة" وهي ظاهرة يعرفها الأطباء جيداً.</p>
+    <p>كذلك لا يصلح المؤشر القياسي للأطفال والمراهقين الذين يحتاجون منحنيات نمو مئوية خاصة بعمرهم وجنسهم، ولا للحوامل الذين يتغير وزنهم طبيعياً مع مراحل الحمل. وكبار السن لديهم اعتبارات مختلفة لأن فقدان العضلات مع التقدم في العمر يجعل الأرقام القياسية أقل ملاءمة لهم. في كل هذه الحالات تبقى قراءة المؤشر معلومة مساندة فقط، والمرجع هو الطبيب.</p>
+
+    <h2>الوزن المثالي حسب الطول: كيف يحسب؟</h2>
+    <p>النطاق الصحي للوزن ليس رقماً واحداً بل نطاقاً كاملاً يوافق قيم المؤشر من 18.5 إلى 24.9. الحاسبة أعلاه تحسب لك هذا النطاق بالكيلوغرام مباشرة، وهو الأفضل نفسياً لأنه يمنحك مرونة حقيقية بدل مطاردة رقم واحد صارم. فمثلاً شخص طوله 170 سم يقع وزنه الصحي بين نحو 54 و72 كغ — أي أن لديه مساحة مريحة تقارب 18 كيلوغراماً داخل النطاق الصحي.</p>
+    <div class="table-wrap"><table>
+      <tr><th>الطول (سم)</th><th>أدنى وزن صحي (كغ)</th><th>أعلى وزن صحي (كغ)</th></tr>
+      <tr><td>155</td><td>44.5</td><td>59.9</td></tr>
+      <tr><td>160</td><td>47.4</td><td>63.7</td></tr>
+      <tr><td>165</td><td>50.4</td><td>67.8</td></tr>
+      <tr><td>170</td><td>53.5</td><td>72.0</td></tr>
+      <tr><td>175</td><td>56.7</td><td>76.3</td></tr>
+      <tr><td>180</td><td>59.9</td><td>80.7</td></tr>
+    </table></div>
+
+    <h2>خطوات عملية للوصول إلى النطاق الصحي</h2>
+    <ul>
+      <li><strong>ابدأ بهدف صغير:</strong> خفض 5% من الوزن الحالي يحدث فرقاً صحياً قابلاً للقياس وفق الممارسات الطبية العامة.</li>
+      <li><strong>الاستدامة قبل الحميات القاسية:</strong> التغييرات الصغيرة الدائمة تتفوق على الحميات الشرسة التي تنهار بعد أسابيع.</li>
+      <li><strong>حرّك أكثر دون جيم:</strong> المشي اليومي المنتظم من أنجح العادات على المدى الطويل.</li>
+      <li><strong>راقب المشروبات:</strong> السعرات السائلة في العصائر والمشروبات الغازية تتراكم بصمت.</li>
+      <li><strong>قِس أسبوعياً لا يومياً:</strong> الوزن اليومي يتقلب مع الماء والطعام، والأسبوعي يعكس الحقيقة.</li>
+    </ul>
+    <div class="note">⚠️ <strong>تنبيه طبي:</strong> هذه الحاسبة أداة تعليمية لتقدير المؤشر وليست تشخيصاً طبياً. لأي قرار صحي — خاصة مع أمراض مزمنة أو حمل — استشر طبيبك دائماً.</div>
+
+    <h2>قياسات مساندة تكمل صورة BMI</h2>
+    <p>لأن المؤشر لا يميز بين الدهون والعضلات، يستكمله الأطباء بقياسات بسيطة تعطيك صورة أدق منزلياً: <strong>محيط الخصر</strong> الذي يقاس عند منتصف المسافة بين أسفل الضلوع وأعلى عظم الورك، وتشير الممارسات العامة إلى أن تجاوزه نحو 94 سم للرجال و80 سم للنساء يرفع تنبيه المخاطر الأيضية حتى مع وزن "طبيعي". ثم <strong>نسبة الخصر إلى الورك</strong> التي تكشف نمط توزيع الدهون، إذ يعتبر تراكمها في منطقة البطن الأكثر ارتباطاً بالمخاطر من تراكمها في الأردن والأفخاذ.</p>
+    <p>والخلاصة العملية: استخدم نتيجة الحاسبة أعلاه كخط أساس رقمي ثابت، وأضف قياس الخصر مرة شهرياً بشريط قياس واحد، وراقب اتجاه الرقمين معاً لا قيمة أي منهما في يوم معين. الاتجاه خلال أشهر هو المؤشر الحقيقي للتقدم، والاثنان معاً يعطيانك ثقة أكبر من أي منهما وحده.</p>
+
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item"><div class="faq-q">ما هو مؤشر كتلة الجسم BMI؟</div><div class="faq-a"><p>رقم يُحسب بقسمة الوزن بالكيلوغرام على مربع الطول بالمتر، ويصنف الوزن إلى نقص أو طبيعي أو زيادة أو سمنة.</p></div></div>
+    <div class="faq-item"><div class="faq-q">كيف أحسب المؤشر يدوياً؟</div><div class="faq-a"><p>وزنك ÷ (طولك بالمتر)². مثال: 70 كغ و1.75 م → 70 ÷ 3.06 = 22.9 (وزن طبيعي).</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل المؤشر دقيق للرياضيين؟</div><div class="faq-a"><p>ليس دائماً؛ العضلات أثقل من الدهون فقد يظهر رياضي متمرس في تصنيف "زيادة" رغم قلة دهونه. أنسب له أدوات قياس التركيبة الجسمية.</p></div></div>
+    <div class="faq-item"><div class="faq-q">ما الوزن المثالي لطولي؟</div><div class="faq-a"><p>أدخل طولك في الحاسبة أعلاه ليظهر نطاقك الصحي الكامل بالكيلوغرام (الموافق للمؤشر 18.5-24.9).</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل تصلح الحاسبة للأطفال والحوامل؟</div><div class="faq-a"><p>لا؛ الأطفال يحتاجون منحنيات نمو مئوية والحوامل وزنهن متغير طبيعياً — المؤشر القياسي غير مناسب لهما.</p></div></div>
+
+    <div class="cta-box">
+      <div class="cta-text"><h3>🔴 المزيد من الأدوات في موقعنا الرسمي</h3><p>اكتشف أدوات مجانية أخرى لا تجدها هنا.</p></div>
+      <a class="btn btn-target" href="https://algeria01.lovable.app" data-target-cta>زيارة الموقع الرسمي ←</a>
+    </div>
+  </article>
+
+  <section class="related">
+    <h2>أدوات ومقالات ذات صلة</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🤰</div><h3>حاسبة الحمل</h3><p>تاريخ الولادة المتوقع وأسبوع الحمل.</p><a href="pregnancy-calculator.html">افتحها الآن ←</a></div>
+      <div class="card"><div class="icon">🎂</div><h3>حاسبة العمر</h3><p>عمرك بالسنوات والأشهر والأيام.</p><a href="age-calculator.html">افتحها الآن ←</a></div>
+      <div class="card"><div class="icon">💧</div><h3>فوائد شرب الماء</h3><p>احتياجك اليومي من الماء حسب وزنك.</p><a href="water-benefits.html">اقرأ الدليل ←</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div><h4>الأدوات</h4><a href="age-calculator.html">حاسبة العمر</a><a href="bmi-calculator.html">حاسبة كتلة الجسم</a><a href="hijri-converter.html">محول التاريخ</a></div>
+    <div><h4>أدلة تقنية</h4><a href="pdf-to-word.html">تحويل PDF</a><a href="speed-up-android.html">تسريع الهاتف</a><a href="recover-facebook.html">استرجاع فيسبوك</a></div>
+    <div><h4>أدلة عامة</h4><a href="dream-meanings.html">تفسير الأحلام</a><a href="whatsapp-status.html">حالات واتساب</a><a href="learn-english.html">تعلم الإنجليزية</a></div>
+    <div><h4>المزيد</h4><a href="tiktok-download.html">تحميل تيك توك</a><a href="gold-guide.html">سعر الذهب</a><a href="https://algeria01.lovable.app" data-target-cta style="color:#fbbf24">🔴 موقعنا الرسمي</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> موسوعة اليوم — جميع الحقوق محفوظة</div>
+</div></footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('bmiBtn'),h=document.getElementById('bmiHeight'),w=document.getElementById('bmiWeight'),out=document.getElementById('bmiResult');
+  btn.addEventListener('click',function(){
+    var ht=parseFloat(h.value),wt=parseFloat(w.value);
+    if(!ht||!wt||ht<80||ht>250||wt<20||wt>400){out.hidden=false;out.innerHTML='⚠️ أدخل قياسات صحيحة (طول 80-250 سم، وزن 20-400 كغ)';return;}
+    var m=ht/100,bmi=wt/(m*m),lo=18.5*m*m,hi=24.9*m*m;
+    var cat,color;
+    if(bmi<18.5){cat='نقص في الوزن';color='#0284c7';}
+    else if(bmi<25){cat='وزن طبيعي ✅';color='#16a34a';}
+    else if(bmi<30){cat='زيادة في الوزن';color='#d97706';}
+    else if(bmi<35){cat='سمنة درجة أولى';color='#dc2626';}
+    else if(bmi<40){cat='سمنة درجة ثانية';color='#b91c1c';}
+    else{cat='سمنة مفرطة';color='#7f1d1d';}
+    out.hidden=false;
+    out.innerHTML='📊 مؤشر كتلة الجسم: <span style="color:'+color+';font-size:1.5rem">'+bmi.toFixed(1)+'</span> — '+cat+
+      '<small>🎯 نطاق وزنك الصحي لطول '+ht+' سم: من '+lo.toFixed(1)+' إلى '+hi.toFixed(1)+' كغ</small>';
+  });
+})();
+</script>
+</body>
+</html>

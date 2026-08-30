@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة المعدل التراكمي | احسب معدلك من 100 ومن 4</title>
+<meta name="description" content="حاسبة المعدل التراكمي المجانية: أدخل موادك ودرجاتها وساعاتها واحسب معدلك الفصلي من 100 وما يقابله من 4.0 فوراً — بدون تسجيل.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://majidalawa.github.io/mosuwa/gpa-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="حاسبة المعدل التراكمي | احسب معدلك من 100 ومن 4">
+<meta property="og:description" content="أدخل موادك ودرجاتها وساعاتها واحسب معدلك الفصلي الموزون من 100 وما يقابله من 4.0 — فوراً.">
+<meta property="og:url" content="https://majidalawa.github.io/mosuwa/gpa-calculator.html">
+<meta property="og:site_name" content="موسوعة اليوم">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كيف يحسب المعدل الفصلي الموزون؟","acceptedAnswer":{"@type":"Answer","text":"اضرب درجة كل مادة في عدد ساعاتها، اجمع النواتج ثم اقسمها على مجموع الساعات. المواد ذات الساعات الأكبر تؤثر أكثر في النتيجة."}},{"@type":"Question","name":"ما الفرق بين المعدل الفصلي والتراكمي؟","acceptedAnswer":{"@type":"Answer","text":"الفصلي يخص مواد فصل دراسي واحد، أما التراكمي فيشمل كل المواد منذ بداية دراستك. لتقدير التراكمي أضف مواد كل فصولك السابقة كصفوف إضافية في الحاسبة."}},{"@type":"Question","name":"كيف أحوّل معدلي من 100 إلى 4؟","acceptedAnswer":{"@type":"Answer","text":"التحويل الخطي الشائع: قسّم معدلك من 100 على 25 (مثال: 85 من 100 = 3.4 من 4). لكن انتبه: بعض الجامعات تستخدم جداول تحويل مختلفة، فالمرجع النهائي دائماً لائحة جامعتك."}},{"@type":"Question","name":"هل معدل 3.5 من 4 جيد؟","acceptedAnswer":{"@type":"Answer","text":"نعم؛ 3.5 من 4 يقابل نحو 87.5% ويُعد معدلاً قوياً يفتح أبواب القبول والمنح في أغلب البرامج."}},{"@type":"Question","name":"كيف أرفع معدلي بسرعة؟","acceptedAnswer":{"@type":"Answer","text":"ركّز على المواد كثيرة الساعات لأنها الأكثر تأثيراً، وأعد المواد الراسبة إن سمحت لائحتك، ووزّع المواد الصعبة على فصول مختلفة."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://majidalawa.github.io/mosuwa/"},{"@type":"ListItem","position":2,"name":"حاسبة المعدل التراكمي","item":"https://majidalawa.github.io/mosuwa/gpa-calculator.html"}]}
+</script>
+<link rel="alternate" type="application/rss+xml" title="موسوعة اليوم RSS" href="https://majidalawa.github.io/mosuwa/rss.xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand">📚 <span>موسوعة</span> اليوم</a>
+  <nav class="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="age-calculator.html">حاسبة العمر</a>
+    <a href="bmi-calculator.html">حاسبة كتلة الجسم</a>
+  </nav>
+</div></header>
+
+<main class="container">
+  <div class="breadcrumbs">🏠 الرئيسية / 🧮 الأدوات / حاسبة المعدل التراكمي</div>
+  <article class="article">
+    <h1>حاسبة المعدل التراكمي (GPA) — معدلك الموزون بضغطة واحدة</h1>
+    <p class="lead">أضف موادك مع درجاتها وعدد ساعاتها، وستحصل فوراً على معدلك الفصلي الموزون من 100 وما يقابله تقريبياً من 4 — بدون تسجيل وبدون حسابات يدوية.</p>
+
+    <div class="tool-box">
+      <div id="gpaRows">
+        <div style="display:grid;grid-template-columns:1fr 90px 90px 40px;gap:8px;align-items:center;font-weight:700;font-size:.85rem;color:#0f766e;margin-bottom:6px">
+          <span>المادة</span><span>الدرجة</span><span>الساعات</span><span></span>
+        </div>
+      </div>
+      <button class="btn btn-outline" id="addRow" style="color:#0d9488;border-color:#0d9488;margin-top:4px">+ إضافة مادة</button>
+      <button class="btn btn-primary" id="gpaBtn" style="margin-top:10px;width:100%">احسب معدلي الآن</button>
+      <div class="result" id="gpaResult" hidden></div>
+    </div>
+
+    <h2>كيف يحسب المعدل الموزون بالساعات؟</h2>
+    <p>المعدل الفصلي ليس متوسطاً بسيطاً للدرجات، بل متوسطاً <strong>موزوناً بعدد الساعات المعتمدة</strong>. المنطق واضح: مادة من 4 ساعات تمثل عبئاً دراسياً مضاعفاً مقارنة بمادة من ساعتين، فمن العدل أن تؤثر أكثر في نتيجتك النهائية. الصيغة ثابتة في أغلب الجامعات العربية: اضرب درجة كل مادة في ساعاتها، اجمع كل النواتج، ثم اقسم المجموع على إجمالي الساعات.</p>
+    <p>مثال سريع يوضح الفرق: طالب حصل على 90 في مادة 4 ساعات و70 في مادة ساعتين. متوسطه الموزون = (90×4 + 70×2) ÷ 6 = 83.3، بينما المتوسط البسيط = 80. هذا الفارق قد يحدد أهليتك لمنحة أو ترتيبك في قائمة الانتظار، ولهذا السبب بالذات ينبغي ألا تختصر الحساب على الورقة — الحاسبة أعلاه تؤدي العملية بدقة لحظية مهما بلغ عدد موادك.</p>
+
+    <h2>التحويل التقريبي من 100 إلى 4</h2>
+    <p>تستخدم أغلب الجامعات العربية نظام الدرجة من 100 بينما تطلب برامج ومنح دولية المعدل من 4. التحويل الخطي الأكثر شيوعاً هو القسمة على 25، وتعرضه الحاسبة تلقائياً مع نتيجتك. لكن انتبه جيداً: بعض المؤسسات تعتمد جداول نطاقات مختلفة (مثلاً 85 فما فوق = 4.0)، فالرقم الذي تقدمه الحاسبة مناسب للاستخدام الأولي والمقارنات، والمرجع النهائي دائماً هو جدول التحويل الرسمي في لائحة جامعتك أو الجهة الطالبة.</p>
+    <div class="table-wrap"><table>
+      <tr><th>معدلك من 100</th><th>المقابل التقريبي من 4</th><th>الانطباع العام</th></tr>
+      <tr><td>95 – 100</td><td>3.8 – 4.0</td><td>ممتاز — مرشح قوي للمنح</td></tr>
+      <tr><td>90 – 94</td><td>3.6 – 3.75</td><td>متميز</td></tr>
+      <tr><td>85 – 89</td><td>3.4 – 3.55</td><td>جيد جداً قوي</td></tr>
+      <tr><td>80 – 84</td><td>3.2 – 3.35</td><td>جيد جداً</td></tr>
+      <tr><td>75 – 79</td><td>3.0 – 3.15</td><td>جيد</td></tr>
+      <tr><td>أقل من 75</td><td>أقل من 3.0</td><td>قابل للتحسين بخطة جادة</td></tr>
+    </table></div>
+
+    <h2>استراتيجيات عملية لرفع معدلك</h2>
+    <ul>
+      <li><strong>استهدف المواد الثقيلة:</strong> تحسين درجتك في مادة 4 ساعات يحرك معدلك أكثر من مادتين بساعتين.</li>
+      <li><strong>أعد المواد الراسبة إن سمحت اللائحة:</strong> كثير من الأنظمة تستبدل الدرجة بدل تجميعها — فرصة حقيقية للمعدلات المتعثرة.</li>
+      <li><strong>وزّع الأعباء:</strong> لا تحشر أصعب المواد في فصل واحد؛ التوازن يحمي معدلك ونفسيتك معاً.</li>
+      <li><strong>ابدأ قوياً في الفصول الأولى:</strong> كلما تقدمت زادت الساعات التراكمية وصعب تحريك المعدل — فترتكز المعدلات العالية على البدايات.</li>
+      <li><strong>تابع معدلك فصلياً:</strong> من يعرف رقمه بدقة يتخذ قرارات التسجيل بذكاء، وهذا بالضبط ما توفره لك الحاسبة أعلاه.</li>
+    </ul>
+
+    <h2>مثال محلول خطوة بخطوة كما في الجامعة</h2>
+    <p>لنفترض طالباً درس هذا الفصل أربع مواد: رياضيات (درجة 88، ساعات 4)، لغة عربية (درجة 92، ساعات 2)، حاسوب (درجة 85، ساعات 3)، ومهارات communication (درجة 78، ساعات 2). الحساب الموزون يجري هكذا: 88×4 = 352، ثم 92×2 = 184، ثم 85×3 = 255، ثم 78×2 = 156. مجموع النقاط = 947، ومجموع الساعات = 11، فالمعدل = 947 ÷ 11 = 86.09 من 100، وما يقابله تقريباً 3.44 من 4 بالتحويل الخطي.</p>
+    <p>لاحظ درساً مهماً في هذا المثال: لو استبدل الطالب درجة الرياضيات 88 بـ 95 (تحسين 7 درجات في مادة 4 ساعات) لقفز المعدل إلى 88.36 — بينما نفس التحسين في مادة الساعتين يرفعه 2.33 فقط. هذه هي "قوة الساعات" التي يجب أن توجه جهدك الدراسي، وستلمحها بنفسك كلما جربت أرقاماً مختلفة في الحاسبة أعلاه.</p>
+
+    <h2>المعدل بعد التخرج: أين يسألون عنه فعلاً؟</h2>
+    <p>كثيرون يظنون أن المعدل ينتهي بآخر فصل دراسي، لكنه يظهر مجدداً في محطات غير متوقعة: طلبات الدراسات العليا التي تضع حدوداً دنيا صريحة، وبرامج المنح الدراسية التي تفرز المتقدمين به أولياً، وبعض فرص التوظيف الحكومية وكبرى الشركات التي تطلبه في نموذج التقديم لمواقع حديثي التخرج، وأيضاً التحويل بين الجامعات والتخصصات المطلوبة. الحقيقة المتوازنة أنه ليس كل شيء في مسيرتك، لكنه غالباً أول باب تطرقه، وارتفاعه يفتح خيارات كانت مغلقة.</p>
+    <p>ولذلك ينصح الطلاب بحساب معدلهم بعد كل فصل لا عند التخرج فقط، لأن المعرفة المبكرة تتيح التصحيح المبكر — فالفصل الذي تكتشف فيه أنك تحتاج 3 درجات إضافية في مادتين لعبور حد معين هو فرصة، بعكس مفاجأة الفصل الأخير التي لا علاج لها. اجعل زيارة هذه الصفحة عادة نهاية كل فصل دراسي.</p>
+
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item"><div class="faq-q">كيف يحسب المعدل الفصلي الموزون؟</div><div class="faq-a"><p>اضرب درجة كل مادة في ساعاتها، اجمع النواتج واقسمها على مجموع الساعات — وهي العملية التي تنفذها الحاسبة أعلاه تلقائياً.</p></div></div>
+    <div class="faq-item"><div class="faq-q">ما الفرق بين الفصلي والتراكمي؟</div><div class="faq-a"><p>الفصلي لمواد فصل واحد، والتراكمي لكل مواد دراستك. لتقدير التراكمي أضف مواد فصولك السابقة كلها كصفوف إضافية.</p></div></div>
+    <div class="faq-item"><div class="faq-q">كيف أحوّل من 100 إلى 4؟</div><div class="faq-a"><p>التحويل الخطي الشائع: اقسم على 25 (85% = 3.4). لكن جداول بعض الجامعات تختلف، فتحقق من لائحتك الرسمية.</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل معدل 3.5 من 4 جيد؟</div><div class="faq-a"><p>نعم، يقابل نحو 87.5% ويعد معدلاً قوياً يفتح أبواب القبول والمنح في أغلب البرامج.</p></div></div>
+    <div class="faq-item"><div class="faq-q">كيف أرفع معدلي بسرعة؟</div><div class="faq-a"><p>ركز على المواد كثيرة الساعات، أعد الراسب إن سمحت اللائحة، ووزع الصعب على فصول متباعدة.</p></div></div>
+
+    <div class="cta-box">
+      <div class="cta-text"><h3>🔴 المزيد من الأدوات في موقعنا الرسمي</h3><p>اكتشف أدوات مجانية أخرى لا تجدها هنا.</p></div>
+      <a class="btn btn-target" href="https://algeria01.lovable.app" data-target-cta>زيارة الموقع الرسمي ←</a>
+    </div>
+  </article>
+
+  <section class="related">
+    <h2>أدوات ومقالات ذات صلة</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">📅</div><h3>محول التاريخ الهجري</h3><p>حوّل بين الهجري والميلادي بدقة.</p><a href="hijri-converter.html">افتحه الآن ←</a></div>
+      <div class="card"><div class="icon">🎂</div><h3>حاسبة العمر</h3><p>عمرك بالسنوات والأشهر والأيام.</p><a href="age-calculator.html">افتحها الآن ←</a></div>
+      <div class="card"><div class="icon">📏</div><h3>محول الوحدات</h3><p>الطول والوزن والحرارة فورياً.</p><a href="unit-converter.html">افتحه الآن ←</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div><h4>الأدوات</h4><a href="age-calculator.html">حاسبة العمر</a><a href="bmi-calculator.html">حاسبة كتلة الجسم</a><a href="hijri-converter.html">محول التاريخ</a></div>
+    <div><h4>أدلة تقنية</h4><a href="pdf-to-word.html">تحويل PDF</a><a href="speed-up-android.html">تسريع الهاتف</a><a href="recover-facebook.html">استرجاع فيسبوك</a></div>
+    <div><h4>أدلة عامة</h4><a href="dream-meanings.html">تفسير الأحلام</a><a href="whatsapp-status.html">حالات واتساب</a><a href="learn-english.html">تعلم الإنجليزية</a></div>
+    <div><h4>المزيد</h4><a href="tiktok-download.html">تحميل تيك توك</a><a href="gold-guide.html">سعر الذهب</a><a href="https://algeria01.lovable.app" data-target-cta style="color:#fbbf24">🔴 موقعنا الرسمي</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> موسوعة اليوم — جميع الحقوق محفوظة</div>
+</div></footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  var rows=document.getElementById('gpaRows');
+  function addRow(){
+    var d=document.createElement('div');
+    d.style.cssText='display:grid;grid-template-columns:1fr 90px 90px 40px;gap:8px;margin-bottom:8px';
+    d.innerHTML='<input type="text" placeholder="اسم المادة" style="padding:9px 12px;border:1.5px solid #e2e8f0;border-radius:10px">'+
+      '<input type="number" class="gr" placeholder="0-100" min="0" max="100" inputmode="decimal" style="padding:9px 12px;border:1.5px solid #e2e8f0;border-radius:10px">'+
+      '<input type="number" class="hr" placeholder="ساعات" min="1" max="10" value="3" inputmode="numeric" style="padding:9px 12px;border:1.5px solid #e2e8f0;border-radius:10px">'+
+      '<button type="button" title="حذف" style="border:none;background:#fee2e2;color:#dc2626;border-radius:10px;font-weight:800;cursor:pointer">✕</button>';
+    d.querySelector('button').addEventListener('click',function(){d.remove();});
+    rows.appendChild(d);
+  }
+  addRow();addRow();addRow();
+  document.getElementById('addRow').addEventListener('click',addRow);
+  document.getElementById('gpaBtn').addEventListener('click',function(){
+    var gs=[].slice.call(document.querySelectorAll('#gpaRows .gr')),
+        hs=[].slice.call(document.querySelectorAll('#gpaRows .hr')),
+        pts=0,hrs=0,n=0;
+    gs.forEach(function(g,i){
+      var gv=parseFloat(g.value),hv=parseFloat(hs[i].value);
+      if(!isNaN(gv)&&!isNaN(hv)&&hv>0){pts+=gv*hv;hrs+=hv;n++;}
+    });
+    var out=document.getElementById('gpaResult');
+    if(!n||!hrs){out.hidden=false;out.innerHTML='⚠️ أدخل درجة وساعة صحيحة لمادة واحدة على الأقل';return;}
+    var avg=pts/hrs,gpa4=Math.min(4,Math.max(0,avg/25));
+    out.hidden=false;
+    out.innerHTML='🎓 معدلك الفصلي: <span style="color:#0d9488;font-size:1.5rem">'+avg.toFixed(2)+'</span> من 100'+
+      '<small>≈ '+gpa4.toFixed(2)+' من 4 (تحويل خطي تقريبي) — على '+hrs+' ساعة معتمدة</small>';
+  });
+})();
+</script>
+</body>
+</html>

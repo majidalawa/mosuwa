@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تحويل التاريخ الهجري إلى ميلادي | محول أم القرى الدقيق</title>
+<meta name="description" content="محول التاريخ الهجري والميلادي مجاناً: حوّل من الميلادي إلى الهجري والعكس بدقة تقويم أم القرى الرسمي — مفيد للوثائق والمواعيد والأعياد.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://majidalawa.github.io/mosuwa/hijri-converter.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="تحويل التاريخ الهجري إلى ميلادي | محول أم القرى الدقيق">
+<meta property="og:description" content="حوّل من الميلادي إلى الهجري والعكس بدقة تقويم أم القرى الرسمي — فوراً ومجاناً.">
+<meta property="og:url" content="https://majidalawa.github.io/mosuwa/hijri-converter.html">
+<meta property="og:site_name" content="موسوعة اليوم">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كيف أحول التاريخ الميلادي إلى هجري؟","acceptedAnswer":{"@type":"Answer","text":"اختر التاريخ الميلادي في المحول أعلاه وستظهر لك النتيجة الهجرية فوراً وفق تقويم أم القرى الرسمي المعتمد في المملكة العربية السعودية."}},{"@type":"Question","name":"ما دقة تقويم أم القرى؟","acceptedAnswer":{"@type":"Answer","text":"تقويم أم القرى هو التقويم الرسمي الحسابي للسعودية ويطابق الإعلانات الرسمية في الغالبية العظمى من السنوات، مع احتمال فرق يوم في بعض السنوات التي تعتمد فيها بداية الشهر على رؤية الهلال الشرعية."}},{"@type":"Question","name":"لماذا يختلف التاريخ الهجري يوماً بين الدول؟","acceptedAnswer":{"@type":"Answer","text":"لأن بداية الشهر القمري تعتمد على رؤية الهلال التي تختلف مواقعها الجغرافية في إدراكها، بالإضافة إلى اختلاف الحسابات الفلكية بين الهيئات الرسمية."}},{"@type":"Question","name":"كيف أعرف الأعياد الدينية بدقة؟","acceptedAnswer":{"@type":"Answer","text":"الأعياد تُعلن رسمياً من الجهات الشرعية المختصة بكل دولة بناءً على الرؤية، والمحول مفيد للتقدير المسبق لا للتثبت الشرعي النهائي."}},{"@type":"Question","name":"هل المحول مناسب للمستندات الرسمية؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يعتمد تقويم أم القرى الرسمي المستخدم في الوثائق السعودية، لكن توثيق المستندات الحساسة يبقى مسؤولية الجهات الرسمية المعتمدة."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://majidalawa.github.io/mosuwa/"},{"@type":"ListItem","position":2,"name":"محول التاريخ الهجري","item":"https://majidalawa.github.io/mosuwa/hijri-converter.html"}]}
+</script>
+<link rel="alternate" type="application/rss+xml" title="موسوعة اليوم RSS" href="https://majidalawa.github.io/mosuwa/rss.xml">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand">📚 <span>موسوعة</span> اليوم</a>
+  <nav class="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="gpa-calculator.html">حاسبة المعدل</a>
+    <a href="unit-converter.html">محول الوحدات</a>
+  </nav>
+</div></header>
+
+<main class="container">
+  <div class="breadcrumbs">🏠 الرئيسية / 🧮 الأدوات / محول التاريخ الهجري</div>
+  <article class="article">
+    <h1>محول التاريخ — من الميلادي إلى الهجري والعكس بدقة</h1>
+    <p class="lead">اختر التاريخ والاتجاه وستحصل على النتيجة فوراً وفق تقويم أم القرى الرسمي — أداة مثالية للمواعيد الرسمية والأعياد والمناسبات الدينية والوثائق.</p>
+
+    <div class="tool-box">
+      <label for="convDir">🔄 اتجاه التحويل:</label>
+      <select id="convDir">
+        <option value="g2h">ميلادي ← هجري</option>
+        <option value="h2g">هجري ← ميلادي</option>
+      </select>
+      <div id="g2hBox">
+        <label for="gDate">📅 التاريخ الميلادي:</label>
+        <input type="date" id="gDate">
+      </div>
+      <div id="h2gBox" hidden>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+          <div><label for="hDay">اليوم</label><select id="hDay"></select></div>
+          <div><label for="hMonth">الشهر</label><select id="hMonth"></select></div>
+          <div><label for="hYear">السنة (هـ)</label><input type="number" id="hYear" value="1448" min="1343" max="1500" inputmode="numeric" style="width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:1rem;background:#fff"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="hijriBtn" style="margin-top:14px;width:100%">حوّل التاريخ</button>
+      <div class="result" id="hijriResult" hidden></div>
+    </div>
+
+    <h2>الفرق بين التقويمين الهجري والميلادي</h2>
+    <p>يقوم التقويم الهجري على دورة القمر حول الأرض، فتساوي السنة فيه نحو 354 أو 355 يوماً، بينما تعتمد السنة الميلادية على دورة الأرض حول الشمس بواقع 365 يوماً و366 في سنوات الكبس. الفارق الحاصل — أحد عشر يوماً تقريباً كل عام — يجعل مواسم السنة الهجرية (رمضان، الحج، الأعياد) تدور عبر فصول السنة الميلادية، فتأتي رمضان صيفاً ثم شتاءً على مدى ثلاثة عقود تقريباً.</p>
+    <p>هذا الفرق الدائم هو أيضاً سبب ظاهرة "العمر الهجري الأكبر": فمن وُلد بتاريخ معروف بالتقويمين سيجد أنه أكبر هجرياً بمعدل سنة كاملة تقريباً كل 33 عاماً ميلادية، لأن دورة القمر تكمل "سنواتها" أسرع. المحول أعلاه يختصر كل هذه الحسابات عنك بلحظة واحدة.</p>
+
+    <h2>ما هو تقويم أم القرى ولماذا نعتمده؟</h2>
+    <p>تقويم أم القرى هو التقويم الرسمي الحسابي المعتمد في المملكة العربية السعودية، ويُستخدم في الوثائق الرسمية والمواعيد الحكومية، ويشكل المرجع الحسابي الذي تسترشد به أغلب الدول العربية في تحديد التواريخ الهجرية. اعتمادنا له في المحول يجعل نتائجه متوافقة مع أغلب المستندات الرسمية في المنطقة، مع مراعاة أن بداية الأشهر الدينية كرمضان وشوال قد تتحدد في بعض السنوات بالرؤية الشرعية للهلال فتختلف يوماً عن الحساب — وهذا أمر معلوم ومقبول في التقويمين معاً.</p>
+
+    <h2>أشهر السنة الهجرية وأوزانها</h2>
+    <div class="table-wrap"><table>
+      <tr><th>#</th><th>الشهر</th><th>مناسباته المشهورة</th></tr>
+      <tr><td>1</td><td>محرم</td><td>رأس السنة الهجرية</td></tr>
+      <tr><td>3</td><td>ربيع الأول</td><td>المولد النبوي</td></tr>
+      <tr><td>7</td><td>رجب</td><td>الإسراء والمعراج</td></tr>
+      <tr><td>9</td><td>رمضان</td><td>الصيام وليلة القدر</td></tr>
+      <tr><td>10</td><td>شوال</td><td>عيد الفطر</td></tr>
+      <tr><td>12</td><td>ذو الحجة</td><td>الحج وعيد الأضحى</td></tr>
+    </table></div>
+
+    <h2>استخدامات عملية للمحول يومياً</h2>
+    <ul>
+      <li><strong>الوثائق والمعاملات:</strong> مواءمة تواريخ العقود والشهادات بين النظامين في السعودية والدول المعتمدة للهجري.</li>
+      <li><strong>التخطيط الديني:</strong> تقدير مواعيد رمضان والأعياد مسبقاً لترتيب الإجازات والسفر.</li>
+      <li><strong>الذكرى الشخصية:</strong> معرفة يوم الميلاد الهجري والميلادي معاً لكل فرد في العائلة.</li>
+      <li><strong>المهنيون والطلاب:</strong> فهم الجداول الدراسية والمالية المبنية على السنة الهجرية.</li>
+      <li><strong>المطورون والمحررون:</strong> تدقيق التواريخ في المحتوى العربي ثنائي التقويم.</li>
+    </ul>
+    <div class="note">💡 <strong>ملاحظة فنية:</strong> المحول يدعم السنوات الهجرية من 1343 إلى 1500 هـ تقريباً (نطاق تقويم أم القرى الحسابي القياسي). لتحديد بداية الأشهر الدينية بدقة شرعية نهائية، استرشد دائماً بالإعلانات الرسمية لجهات الرؤية في بلدك.</div>
+
+    <h2>لماذا تختصر السنة الهجرية 354 يوماً فقط؟</h2>
+    <p>الشهر القمري يساوي دورة القمر الكاملة حول الأرض بالنسبة للشمس، وتمتد نحو 29.5 يوماً في المتوسط. اضرب هذا الرقم في اثني عشر شهراً وستحصل على سنة من 354 يوماً و8 ساعات تقريباً — أي أقصر من السنة الشمسية بنحو 11 يوماً. ولأن التقويم الهجري لا يضيف شهراً كبيساً يومياً كما فعلت الشعوب القديمة لمواءمة السنة الشمسية، يظل التزامه القمري صارماً: فبداية كل شهر هي فعلاً اقتران القمر الجديد لا ترتيب الفصول.</p>
+    <p>هذه الـ 11 ساعة الزائدة كل سنة تتراكم لتشكل سنة كاملة كل 33 سنة تقريباً، وهو الرقم الذي يفسر لماذا "تسبق" السنوات الهجرية نظيراتها الميلادية بهذه السرعة: فسنة 1448 هـ بدأت فعلياً قبل مطلع سنة 2027 م بقليل، وسيستمر التقارب الزمني بين رأسي السنتين بالانزياح نحو الخلف عبر العقود القادمة.</p>
+
+    <h2>أخطاء شائعة يقع فيها الجميع عند التحويل</h2>
+    <ul>
+      <li><strong>تقريب "كل سنة هجرية = 33 يوماً أقل":</strong> القاعدة الذهنية مفيدة للتقدير لكنها تخطئ بسنتين إلى ثلاث في بعض الفترات — المحول الدقيق لا بديل عنها للوثائق.</li>
+      <li><strong>اعتماد الحساب وحده للأعياد:</strong> الحساب يقرب، والإعلان الرسمي للرؤية هو الفاصل بين فرق يوم كامل في رمضان والعيد.</li>
+      <li><strong>خلط التاريخ الليلي والنهاري:</strong> اليوم الهجري يبدأ من المغرب، فمساء الخميس ميلادياً قد يكون فجر الجمعة هجرياً — انتبه عند تدوين المواعيد المسائية.</li>
+      <li><strong>ترجمة الشهور حرفياً:</strong> شهور مكتوبة بأرقام مختلفة بين التقويمين قد تقود لخلط "الربع" الشمسي مع ربع الأول القمري.</li>
+    </ul>
+    <p>الخلاصة: استخدم المحول أعلاه للدقة الحسابية الرسمية، واحتفظ بالقواعد الذهنية للتقديرات السريعة، واعتمد الإعلانات الرسمية للتواريخ الدينية — بالثلاثة معاً لن تخطئ تاريخاً مهما كانت الحالة.</p>
+
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item"><div class="faq-q">كيف أحول التاريخ الميلادي إلى هجري؟</div><div class="faq-a"><p>اختر اتجاه "ميلادي ← هجري"، أدخل التاريخ، وستظهر النتيجة فوراً وفق تقويم أم القرى الرسمي.</p></div></div>
+    <div class="faq-item"><div class="faq-q">ما دقة تقويم أم القرى؟</div><div class="faq-a"><p>هو التقويم الحسابي الرسمي للسعودية ويطابق الإعلانات الرسمية في أغلب السنوات، مع احتمال فرق يوم في سنوات تتحدد بالرؤية الشرعية.</p></div></div>
+    <div class="faq-item"><div class="faq-q">لماذا يختلف الهجري يوماً بين الدول؟</div><div class="faq-a"><p>لبداية الشهر رؤيتها الخاصة باختلاف المواقع الجغرافية والهيئات، إضافة إلى اختلاف الحسابات الفلكية بين الدول.</p></div></div>
+    <div class="faq-item"><div class="faq-q">كيف أعرف الأعياد بدقة؟</div><div class="faq-a"><p>المحول يقدرها مسبقاً، أما التثبت النهائي فمن الإعلان الرسمي للجهات الشرعية المختصة في كل دولة.</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل المحول مناسب للمستندات الرسمية؟</div><div class="faq-a"><p>نعم يعتمد أم القرى الرسمي المستخدم في الوثائق، والتوثيق الحساس يبقى لجهاته الرسمية المعتمدة.</p></div></div>
+
+    <div class="cta-box">
+      <div class="cta-text"><h3>🔴 المزيد من الأدوات في موقعنا الرسمي</h3><p>اكتشف أدوات مجانية أخرى لا تجدها هنا.</p></div>
+      <a class="btn btn-target" href="https://algeria01.lovable.app" data-target-cta>زيارة الموقع الرسمي ←</a>
+    </div>
+  </article>
+
+  <section class="related">
+    <h2>أدوات ومقالات ذات صلة</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🎓</div><h3>حاسبة المعدل التراكمي</h3><p>معدلك الموزون من 100 ومن 4.</p><a href="gpa-calculator.html">افتحها الآن ←</a></div>
+      <div class="card"><div class="icon">🎂</div><h3>حاسبة العمر</h3><p>عمرك بالتفصيل خلال ثانية.</p><a href="age-calculator.html">افتحها الآن ←</a></div>
+      <div class="card"><div class="icon">📏</div><h3>محول الوحدات</h3><p>الطول والوزن والحرارة فورياً.</p><a href="unit-converter.html">افتحه الآن ←</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div><h4>الأدوات</h4><a href="age-calculator.html">حاسبة العمر</a><a href="bmi-calculator.html">حاسبة كتلة الجسم</a><a href="hijri-converter.html">محول التاريخ</a></div>
+    <div><h4>أدلة تقنية</h4><a href="pdf-to-word.html">تحويل PDF</a><a href="speed-up-android.html">تسريع الهاتف</a><a href="recover-facebook.html">استرجاع فيسبوك</a></div>
+    <div><h4>أدلة عامة</h4><a href="dream-meanings.html">تفسير الأحلام</a><a href="whatsapp-status.html">حالات واتساب</a><a href="learn-english.html">تعلم الإنجليزية</a></div>
+    <div><h4>المزيد</h4><a href="tiktok-download.html">تحميل تيك توك</a><a href="gold-guide.html">سعر الذهب</a><a href="https://algeria01.lovable.app" data-target-cta style="color:#fbbf24">🔴 موقعنا الرسمي</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> موسوعة اليوم — جميع الحقوق محفوظة</div>
+</div></footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  var MONTHS=['محرم','صفر','ربيع الأول','ربيع الآخر','جمادى الأولى','جمادى الآخرة','رجب','شعبان','رمضان','شوال','ذو القعدة','ذو الحجة'];
+  var dir=document.getElementById('convDir'),gBox=document.getElementById('g2hBox'),hBox=document.getElementById('h2gBox');
+  var hDay=document.getElementById('hDay'),hMonth=document.getElementById('hMonth');
+  for(var d=1;d<=30;d++)hDay.add(new Option(d,d));
+  MONTHS.forEach(function(m,i){hMonth.add(new Option(m,i+1));});
+  dir.addEventListener('change',function(){
+    gBox.hidden=dir.value!=='g2h';hBox.hidden=dir.value!=='h2g';
+  });
+  function fmtHijri(date){
+    try{
+      var f=new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'numeric',year:'numeric'});
+      var parts={};f.formatToParts(date).forEach(function(p){parts[p.type]=p.value;});
+      var y=parseInt(String(parts.year).replace(/[^\u0660-\u06690-9]/g,'').replace(/[\u0660-\u0669]/g,function(c){return String(c.charCodeAt(0)-0x0660)}));
+      var m=parseInt(String(parts.month).replace(/[^\u0660-\u06690-9]/g,'').replace(/[\u0660-\u0669]/g,function(c){return String(c.charCodeAt(0)-0x0660)}));
+      var dd=parseInt(String(parts.day).replace(/[^\u0660-\u06690-9]/g,'').replace(/[\u0660-\u0669]/g,function(c){return String(c.charCodeAt(0)-0x0660)}));
+      if(isNaN(y)||isNaN(m)||isNaN(dd))return null;
+      return {y:y,m:m,d:dd};
+    }catch(e){return null;}
+  }
+  function hOrdinal(o){return o.y*355+o.m*30+o.d;}
+  function hijriToGreg(hy,hm,hd){
+    if(hy<1343||hy>1500)return null;
+    var est=new Date(622,6,19);
+    est.setDate(est.getDate()+Math.round((hy-1)*354.36707+(hm-1)*29.5+hd-227015));
+    var target=hOrdinal({y:hy,m:hm,d:hd}),cur=fmtHijri(est);
+    if(!cur)return null;
+    for(var i=0;i<60;i++){
+      var diff=target-hOrdinal(cur);
+      if(diff===0)return est;
+      est.setDate(est.getDate()+(diff>0?1:-1));
+      cur=fmtHijri(est);
+      if(!cur)return null;
+    }
+    return null;
+  }
+  var btn=document.getElementById('hijriBtn'),out=document.getElementById('hijriResult');
+  function fmtG(d){return d.toLocaleDateString('ar',{weekday:'long',year:'numeric',month:'long',day:'numeric'});}
+  btn.addEventListener('click',function(){
+    try{
+      if(dir.value==='g2h'){
+        if(!document.getElementById('gDate').value){out.hidden=false;out.innerHTML='⚠️ اختر التاريخ الميلادي أولاً';return;}
+        var g=new Date(document.getElementById('gDate').value+'T12:00:00');
+        var h=fmtHijri(g);
+        if(!h){out.hidden=false;out.innerHTML='⚠️ تعذر التحويل في هذا المتصفح — جرّب متصفحاً حديثاً';return;}
+        out.hidden=false;
+        out.innerHTML='🕌 التاريخ الهجري: <span style="color:#0d9488;font-size:1.4rem">'+h.d+' '+MONTHS[h.m-1]+' '+h.y+' هـ</span><small>يوم '+fmtG(g)+'</small>';
+      }else{
+        var res=hijriToGreg(parseInt(document.getElementById('hYear').value),parseInt(hMonth.value),parseInt(hDay.value));
+        if(!res){out.hidden=false;out.innerHTML='⚠️ التاريخ خارج النطاق المدعوم (1343-1500 هـ) أو تعذر التحويل';return;}
+        var hh=fmtHijri(res);
+        out.hidden=false;
+        out.innerHTML='📅 التاريخ الميلادي: <span style="color:#0d9488;font-size:1.4rem">'+fmtG(res)+'</span><small>الهجري: '+(hh?hh.d+' '+MONTHS[hh.m-1]+' '+hh.y+' هـ':'')+'</small>';
+      }
+    }catch(e){out.hidden=false;out.innerHTML='⚠️ حدث خطأ غير متوقع — جرّب متصفحاً حديثاً';}
+  });
+})();
+</script>
+</body>
+</html>
