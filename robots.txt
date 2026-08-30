@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Google / Bing crawlers welcome
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://majidalawa.github.io/mosuwa/sitemap.xml

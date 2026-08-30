@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة العمر | احسب عمرك بالسنوات والأشهر والأيام بدقة</title>
+<meta name="description" content="حاسبة العمر المجانية: احسب عمرك بالسنوات والأشهر والأيام والساعات، واعرف عدد أيام حياتك ومتى عيد ميلادك القادم — بدون تسجيل.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://majidalawa.github.io/mosuwa/age-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="حاسبة العمر | احسب عمرك بالسنوات والأشهر والأيام بدقة">
+<meta property="og:description" content="أدخل تاريخ ميلادك واعرف عمرك بدقة ثانية بثانية، مع عدد أيام حياتك كاملة.">
+<meta property="og:url" content="https://majidalawa.github.io/mosuwa/age-calculator.html">
+<meta property="og:site_name" content="موسوعة اليوم">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كيف أحسب عمري بالسنوات والأشهر والأيام؟","acceptedAnswer":{"@type":"Answer","text":"أدخل تاريخ ميلادك في حاسبة العمر أعلاه وستظهر لك النتيجة فوراً مقسّمة إلى سنوات وأشهر وأيام، مع عدد إجمالي أيام حياتك."}},{"@type":"Question","name":"هل حساب العمر يبدأ من يوم الولادة؟","acceptedAnswer":{"@type":"Answer","text":"نعم، العمر يُحسب من يوم الولادة الكامل. يوم ميلادك هو يومك الأول، وعيد ميلادك الأول يوافق مرور سنة كاملة من تاريخ الميلاد."}},{"@type":"Question","name":"هل الحاسبة تدعم التاريخ الهجري؟","acceptedAnswer":{"@type":"Answer","text":"الحاسبة تعتمد التاريخ الميلادي. إن كنت تعرف تاريخ ميلادك هجرياً فقط، يمكنك تحويله ميلادياً عبر أدوات التحويل الرسمية ثم إدخاله في الحاسبة."}},{"@type":"Question","name":"لماذا أختلف شهراً واحداً عن حسابي اليدوي؟","acceptedAnswer":{"@type":"Answer","text":"السبب اختلاف عدد أيام الشهور (28-31 يوماً). حاسبتنا تعتمد طريقة الفرق الدقيق بين التاريخين بنفس قواعد العد الشائعة: سنوات كاملة ثم أشهر كاملة ثم الأيام المتبقية."}},{"@type":"Question","name":"هل بياناتي آمنة عند استخدام حاسبة العمر؟","acceptedAnswer":{"@type":"Answer","text":"نعم تماماً، الحساب يتم داخل متصفحك فقط ولا يتم إرسال تاريخ ميلادك إلى أي سيرفر."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://majidalawa.github.io/mosuwa/"},{"@type":"ListItem","position":2,"name":"حاسبة العمر","item":"https://majidalawa.github.io/mosuwa/age-calculator.html"}]}
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="brand">📚 <span>موسوعة</span> اليوم</a>
+  <nav class="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="name-generator.html">مولد الأسماء</a>
+    <a href="unit-converter.html">محول الوحدات</a>
+  </nav>
+</div></header>
+
+<main class="container">
+  <div class="breadcrumbs">🏠 الرئيسية / 🧮 الأدوات / حاسبة العمر</div>
+  <article class="article">
+    <h1>حاسبة العمر — اعرف عمرك بالتفصيل خلال ثانية</h1>
+    <p class="lead">أدخل تاريخ ميلادك وستعرف فوراً عمرك بالسنوات والأشهر والأيام، إضافة إلى عدد أيام وساعات حياتك الكاملة، وكم يوماً متبقياً لعيد ميلادك القادم.</p>
+
+    <div class="tool-box">
+      <label for="birthDate">📅 تاريخ الميلاد:</label>
+      <input type="date" id="birthDate">
+      <label for="calcTo"> حتى التاريخ (اتركه اليوم افتراضياً):</label>
+      <input type="date" id="calcTo">
+      <button class="btn btn-primary" id="calcBtn" style="margin-top:14px;width:100%">احسب عمري الآن</button>
+      <div class="result" id="ageResult" hidden></div>
+    </div>
+
+    <h2>كيف تعمل حاسبة العمر؟</h2>
+    <p>تعتمد الحاسبة على طريقة الفرق التقويمي الدقيق: تحسب أولاً السنوات الكاملة المنقضية بين تاريخ الميلاد وتاريخ اليوم، ثم الأشهر الكاملة المتبقية بعد استبعاد السنوات، وأخيراً الأيام المتبقية بعد استبعاد الأشهر. هذه هي الطريقة المعتمدة في معظم الوثائق الرسمية حول العالم، وهي الأدق ممّا لو جمعت الأشهر كسدادياً.</p>
+    <p>على سبيل المثال، شخص وُلد في 15 مارس 1995 وكان تاريخ اليوم 30 أغسطس 2026، سيكون عمره 31 سنة و5 أشهر و15 يوماً. لاحظ كيف لم نقرّب الأشهر لأقرب 30 يوماً — بل عدّنا الأشهر الفعلية التي مرت فعلاً على التقويم. هذا الفرق يبدو صغيراً لكنه مهم في الوثائق الرسمية وطلبات التقديم للوظائف أو الجوازات.</p>
+
+    <h2>ماذا تعني الأرقام الإضافية في النتيجة؟</h2>
+    <p>إضافة إلى عمرك القياسي، تعرض الحاسبة عدد إجمالي أيام حياتك — وهو رقم ممتع يذكّرك بحجم الرحلة التي قطعتها فعلاً. شخص عمره 30 سنة عاش أكثر من 10,957 يوماً و262,968 ساعة تقريباً. كما تعرض الحاسبة موعد عيد ميلادك القادم وعدد الأيام المتبقية له، وهو ما يجعلها عملية أيضاً لتخطيط الاحتفالات أو معرفة متى تستحق مزايا جديدة تتطلب بلوغ عمر معين.</p>
+
+    <h2>استخدامات حاسبة العمر العملية</h2>
+    <ul>
+      <li><strong>التقديم الرسمي:</strong> ملء طلبات العمل والجوازات والسفر التي تتطلب العمر بصيغة سنوات/أشهر/أيام.</li>
+      <li><strong>الأطفال:</strong> معرفة عمر الطفل بالأشهر بدقة — ضروري لمواعيد التطعيمات ومراحل النمو.</li>
+      <li><strong>الرياضة:</strong> الفئات العمرية في المسابقات تُحدد بتاريخ دقيق وليس بالسنة فقط.</li>
+      <li><strong>الصحة:</strong> حسابات السعرات والجرعات الدوائية تعتمد أحياناً على العمر الدقيق.</li>
+      <li><strong>الفضول الممتع:</strong> كم ليلة ونهار عشت؟ شارك النتيجة مع أصدقائك وقارنوا.</li>
+    </ul>
+
+    <h2>الفرق بين العمر الشمسي والعمر الهجري</h2>
+    <p>يعتمد التقويم الميلادي (الشمسي) على دورة الأرض حول الشمس البالغة 365 يوماً تقريباً، بينما يقوم التقويم الهجري (القمري) على دورة القمر حول الأرض البالغة نحو 354 يوماً، مما يجعل السنة الهجرية أقصر بنحو 11 يوماً من نظيرتها الميلادية. هذا الفرق يعني أن الشخص الذي يعرف تاريخ ميلاده بالتقويمين سيجد عمره الهجري يزيد حرفياً عن الميلادي بمعدل سنة كاملة كل 33 سنة تقريباً — وهي ظاهرة يعرفها من يحتفل بعيد ميلاده بالتقويمين معاً.</p>
+    <p>لهذا السبب تنصح الإدارات الرسمية دائماً باعتماد تاريخ ميلاد واحد ثابت كما هو مسجل في الهوية، وتحويل التواريخ الهجرية ميلادياً عبر المعادلات الرسمية قبل إدخالها في أي حاسبة عمر. وحين تلاحظ أن عمرك الهجري "أكبر" من عمرك الميلادي، فليس خطأً في الحساب — بل طبيعة الفرق بين التقويمين.</p>
+
+    <h2>أسئلة يطرحها الآباء عن حساب عمر أطفالهم</h2>
+    <p>يحتاج الآباء إلى دقة مضاعفة في حساب أعمار أطفالهم لأن معظم مواعيد التطعيمات وفحوصات النمو والقبول في الحضانة تُحدد بالأشهر لا بالسنوات. طفل عمره 18 شهراً تختلف احتياجاته التطورية جذرياً عن طفل عمره 24 شهراً رغم أن كليهما "سنة ونصف" بالتقريب. لذلك يفضل كثير من الأطباء صيغة (سنوات + أشهر + أيام) بدقة كاملة عند كل زيارة طبية، وهي الصيغة التي توفرها حاسبتنا في نتيجتها التفصيلية.</p>
+    <p>نصيحة إضافية: احفظ تاريخ ميلاد طفلك بصيغتين — يوم/شهر/سنة الميلادية الرسمية، والأسبوعية المفيدة في الأشهر الأولى لتتبع التطور السريع، فالأولى مرجع الوثائق والتسجيلات المدرسية لاحقاً والثانية مفيدة للمتابعة الصحية المبكرة.</p>
+
+    <h2>متى يصبح العمر الدقيق مسألة مصيرية؟</h2>
+    <p>خارج المتعة، تترتب على العمر الدقيق قرارات حقيقية: أهلية التسجيل في المسابقات الرياضية التي تفرض حدوداً عمرية صارمة، وحقوق التقاعد التي تُحسب بالأيام في بعض الأنظمة، ومواعيد قبول الأطفال في المدارس التي تُقاس غالباً بتاريخ محدد (مثل بلوغ 6 سنوات قبل مطلع العام الدراسي). في كل هذه الحالات قد يعني فرق يوم واحد التأجيل سنة كاملة — وهو ما يجعل الاعتماد على التقدير اليدوي مخاطرة صغيرة لكنها مُكلفة أحياناً، والدقة هنا ليست رفاهية بل ضرورة.</p>
+
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item"><div class="faq-q">كيف أحسب عمري بالسنوات والأشهر والأيام؟</div><div class="faq-a"><p>أدخل تاريخ ميلادك في الحاسبة أعلاه وستظهر النتيجة فوراً مقسّمة إلى سنوات وأشهر وأيام، مع عدد إجمالي أيام حياتك وعيد ميلادك القادم.</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل حساب العمر يبدأ من يوم الولادة؟</div><div class="faq-a"><p>نعم، العمر يُحسب من يوم الولادة الكامل. يوم ميلادك هو يومك الأول، وعيد ميلادك الأول يوافق مرور سنة كاملة من تاريخ الميلاد.</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل الحاسبة تدعم التاريخ الهجري؟</div><div class="faq-a"><p>الحاسبة تعتمد التاريخ الميلادي. إن كنت تعرف تاريخ ميلادك هجرياً فقط، حوّله ميلادياً عبر أدوات التحويل الرسمية ثم أدخله في الحاسبة.</p></div></div>
+    <div class="faq-item"><div class="faq-q">لماذا تختلف النتيجة شهراً عن حسابي اليدوي؟</div><div class="faq-a"><p>السبب اختلاف أيام الشهور (28-31 يوماً). الحاسبة تعتمد عدّ الأشهر الفعلية على التقويم وليس تقسيم الأيام على 30.</p></div></div>
+    <div class="faq-item"><div class="faq-q">هل بياناتي آمنة؟</div><div class="faq-a"><p>نعم تماماً — كل الحسابات تجري داخل متصفحك، ولا يُرسل تاريخ ميلادك إلى أي سيرفر أو تُخزَّن في أي مكان.</p></div></div>
+
+    <div class="cta-box">
+      <div class="cta-text"><h3>🔴 المزيد من الأدوات في موقعنا الرسمي</h3><p>اكتشف أدوات مجانية أخرى لا تجدها هنا.</p></div>
+      <a class="btn btn-target" href="https://algeria01.lovable.app" data-target-cta>زيارة الموقع الرسمي ←</a>
+    </div>
+  </article>
+
+  <section class="related">
+    <h2>أدوات ومقالات ذات صلة</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">👶</div><h3>مولد الأسماء</h3><p>أسماء أولاد وبنات وأسماء مستخدمين عشوائية.</p><a href="name-generator.html">جرّبه الآن ←</a></div>
+      <div class="card"><div class="icon">📏</div><h3>محول الوحدات</h3><p>حوّل الطول والوزن والحرارة فورياً.</p><a href="unit-converter.html">جرّبه الآن ←</a></div>
+      <div class="card"><div class="icon">💧</div><h3>فوائد شرب الماء</h3><p>احسب احتياجك اليومي من الماء حسب وزنك.</p><a href="water-benefits.html">اقرأ الدليل ←</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div><h4>الأدوات</h4><a href="age-calculator.html">حاسبة العمر</a><a href="name-generator.html">مولد الأسماء</a><a href="unit-converter.html">محول الوحدات</a></div>
+    <div><h4>أدلة تقنية</h4><a href="pdf-to-word.html">تحويل PDF</a><a href="internet-speed.html">سرعة النت</a><a href="android-apps.html">تطبيقات أندرويد</a></div>
+    <div><h4>أدلة عامة</h4><a href="dream-meanings.html">تفسير الأحلام</a><a href="remote-work.html">وظائف عن بعد</a><a href="free-games.html">ألعاب مجانية</a></div>
+    <div><h4>المزيد</h4><a href="water-benefits.html">فوائد الماء</a><a href="quick-cake.html">كيك سريع</a><a href="https://algeria01.lovable.app" data-target-cta style="color:#fbbf24">🔴 موقعنا الرسمي</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> موسوعة اليوم — جميع الحقوق محفوظة</div>
+</div></footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('calcBtn'),out=document.getElementById('ageResult');
+  var bd=document.getElementById('birthDate'),cd=document.getElementById('calcTo');
+  btn.addEventListener('click',function(){
+    if(!bd.value){out.hidden=false;out.innerHTML='⚠️ الرجاء اختيار تاريخ الميلاد أولاً';return;}
+    var b=new Date(bd.value+'T00:00:00'), c=cd.value?new Date(cd.value+'T00:00:00'):new Date();
+    if(b>c){out.hidden=false;out.innerHTML='⚠️ تاريخ الميلاد يجب أن يكون قبل تاريخ اليوم';return;}
+    var y=c.getFullYear()-b.getFullYear(), m=c.getMonth()-b.getMonth(), d=c.getDate()-b.getDate();
+    if(d<0){m--;d+=new Date(c.getFullYear(),c.getMonth(),0).getDate();}
+    if(m<0){y--;m+=12;}
+    var totalDays=Math.floor((c-b)/86400000), totalHours=totalDays*24;
+    var next=new Date(c.getFullYear(),b.getMonth(),b.getDate());
+    if(next<=c)next.setFullYear(c.getFullYear()+1);
+    var daysToBd=Math.ceil((next-c)/86400000);
+    out.hidden=false;
+    out.innerHTML='🎂 عمرك: '+y+' سنة و'+m+' شهر و'+d+' يوم'+
+      '<small>📊 عشت حتى الآن '+totalDays.toLocaleString('ar')+' يوماً ('+totalHours.toLocaleString('ar')+' ساعة) — 🎉 عيد ميلادك القادم بعد '+daysToBd+' يوماً</small>';
+  });
+})();
+</script>
+</body>
+</html>
